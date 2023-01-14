@@ -1,0 +1,1542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.GameActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@drawable/header"
+                    android:orientation="vertical" />
+
+
+                <RelativeLayout
+                    android:id="@+id/r1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/background_card"
+                    android:elevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/super_coin"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/user_points_text_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="20,0000 $"
+                                android:textAlignment="viewEnd"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:drawablePadding="5dp"
+                                app:drawableRightCompat="@drawable/pocket_coin_img" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="#e7e7e7" />
+
+
+                        <LinearLayout
+                            android:id="@+id/layout_app"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal"
+                            android:baselineAligned="false">
+
+                            <LinearLayout
+                                android:id="@+id/LeftLayout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="12dp"
+                                android:background="@drawable/btn_bg_one"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:text="@string/left"
+                                    android:textColor="#0059ff"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/game_count_textView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="@string/_0"
+                                    android:textColor="#0059ff"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/totalLayout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="12dp"
+                                android:background="@drawable/btn_bg_two"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginStart="20dp"
+                                    android:textColor="#e9316e"
+                                    android:text="@string/total"/>
+
+                                <TextView
+                                    android:id="@+id/total_game"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="@string/_10"
+                                    android:textColor="#e9316e"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/promotion_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/r1"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:layout_marginVertical="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/promotion_1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/spin_image" />
+
+                    <ImageView
+                        android:id="@+id/promotion_2"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/spin_image" />
+
+                    <ImageView
+                        android:id="@+id/promotion_3"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/captcha_image" />
+
+                    <ImageView
+                        android:id="@+id/promotion_4"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/captcha_image" />
+
+
+                </LinearLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/popular"
+                    android:layout_below="@+id/promotion_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="23dp"
+                        android:text="@string/popular_games"
+                        android:textColor="@color/colorPurple"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/arrow_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp"
+                        android:contentDescription="@string/image_desc" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/popular"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/mp_game1_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/mp_game1"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/mp_game1_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/mp_game1"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Bubble Tower"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/mp_game1_title"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/mp_game1"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:background="@drawable/btn_bg_one"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/play"
+                                android:textColor="@color/watch_color1" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/mp_game2_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/mp_game2"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/mp_game2_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/mp_game2"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Bubble Tower"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/mp_game2_title"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/mp_game2"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/play"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game1"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image1"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/game_name1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image1"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Bubble Tower"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name1"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image1"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/play"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game2"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image2"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp" />
+
+                            <TextView
+                                android:id="@+id/game_name2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image2"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Tower Crash"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name2"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image2"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/play"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game3"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image3"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/game_name3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image3"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Element Block"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name3"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image3"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/play"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game4"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image4"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                 />
+
+                            <TextView
+                                android:id="@+id/game_name4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image4"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Moto Pool"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name4"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image4"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/_10"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game5"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image5"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/game_name5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image5"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Gold Mine"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name5"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image5"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/_10"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game6"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image6"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/game_name6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image6"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Gold Mine"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name6"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image6"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/_10"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game7"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image7"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/game_name7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image7"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Gold Mine"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name7"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image7"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/_10"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game8"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image8"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/game_name8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image8"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Gold Mine"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name8"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image8"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/_10"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game9"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image9"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/game_name9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image9"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Gold Mine"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name9"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image9"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/_10"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game10"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image10"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/game_name10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image10"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Gold Mine"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name10"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image10"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/_10"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game11"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image11"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/game_name11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image11"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Gold Mine"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name11"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image11"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/_10"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game12"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image12"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/game_name12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image12"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Gold Mine"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name12"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image12"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/_10"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game13"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image13"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/game_name13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image13"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Gold Mine"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name13"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image13"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/_10"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game14"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image14"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/game_name14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image14"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Gold Mine"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name14"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image14"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/_10"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game15"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image15"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/game_name15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image15"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Gold Mine"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name15"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image15"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text17"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/_10"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game16"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image16"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/game_name16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image16"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Gold Mine"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name16"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image16"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text18"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/_10"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game17"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image17"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/game_name17"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image17"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Gold Mine"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name17"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image17"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text19"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/_10"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game18"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/game_image18"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/game_name18"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_toEndOf="@+id/game_image18"
+                                android:fontFamily="@font/baloo_thambi"
+                                android:lineSpacingExtra="3sp"
+                                android:text="Gold Mine"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="66dp"
+                                android:layout_height="16dp"
+                                android:layout_below="@+id/game_name18"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/game_image18"
+                                android:background="@drawable/fourstar"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:id="@+id/coin_text20"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="@string/_10"
+                                android:textColor="@color/watch_color1"
+                                android:background="@drawable/btn_bg_one" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

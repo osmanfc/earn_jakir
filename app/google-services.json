@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "303491775952",
+    "project_id": "daily-reward-2d2d0",
+    "storage_bucket": "daily-reward-2d2d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303491775952:android:9fde86548dc7eec17ccdd5",
+        "android_client_info": {
+          "package_name": "com.dailyreward.selfincome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303491775952-ib8u5dgsksg10qsjn51vf8s2l7udv717.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTD8-2VUiiTK73VgXh_cqfVVLpJ2m-I88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "303491775952-ib8u5dgsksg10qsjn51vf8s2l7udv717.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
